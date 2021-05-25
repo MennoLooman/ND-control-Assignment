@@ -63,14 +63,9 @@ ylabel('max absolute eigenvalue');
 axis([0,(N-1)/dt,0,4]);
 title('eigenvalues of the cl system for various h and delays tau');
 
+%% improved gain Q2
 %choice of h=0.3
 h = 0.3; %without delays, controller is stable
-Q2_K_bar = zeros(10,3);
-for i = 1:10
-    tau = i*h/10;
-    Q2_K_bar(i,:) = place(Q2_F(h,tau),Q2_G(h,tau),[-0.2,0.2,-0.1]);
-end
-%% improved gain Q2
 Q2_K_bar_new = [5.6 7 0.3]; 
 Q2_save_eig_2 = zeros(1,10);
 range = zeros(1,10);
