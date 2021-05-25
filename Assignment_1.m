@@ -5,7 +5,7 @@ B = [0;1];
 %% Question 1
 %contious time, constant sampling time h, no delays tau=0
 %K_bar places poles on {-2,-3}
-Q1_K_bar = place(A,B,[-2,-3]);
+Q1_K_bar = [5.6 7];
 
 %closed loop eigenvalues check
 Q1_cl_eig = eig(A-B*Q1_K_bar);
